@@ -1,0 +1,129 @@
+/***
+Styles Guide:
+0. Reset
+1. Layout
+2. Generic items
+3. Parts of web
+4. List
+5. Form
+6. Animations
+------------------
+*/
+
+/* 0. Reset */
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* { box-sizing:border-box;}
+
+/* 1. Layout */
+
+body { text-align: center; font-family: Roboto, Helvetica, sans-serif; background: #fff;}
+
+.header { display: flex; justify-content: center; align-items: center;}
+
+.navbar { display: flex; justify-content: center; align-items: center; }
+
+.list-servicios { display: flex; align-items: center; justify-content: center; }
+.list-servicios figure { display: flex; justify-content: center; align-items: center; flex-flow: column; }
+.footer {display: flex; align-items: center; justify-content: center; }
+/* 2. Generic itmes */
+
+.header {  background: red; height: 450px; background-size: cover;
+  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#e5e089+0,9cc4ed+66 */
+  background: #e5e089; /* Old browsers */
+  background: -moz-linear-gradient(-45deg, #e5e089 0%, #9cc4ed 66%); /* FF3.6-15 */
+  background: -webkit-linear-gradient(-45deg, #e5e089 0%,#9cc4ed 66%); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(135deg, #e5e089 0%,#9cc4ed 66%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e5e089', endColorstr='#9cc4ed',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+
+.navbar { background: #404040; height: 63px; }
+  .navbar a {color: #fff; text-decoration: none; text-transform: uppercase; padding: 0px 20px; font-family: Roboto, Helvetica;}
+  
+.portafolio {text-align: left;}
+
+.footer { background: #202020; color: #fff; height: 150px;}
+
+.title {font: 50px 'Montserrat'; text-transform: uppercase; padding-bottom: 40px;}
+
+p { margin-bottom: 40px; }
+
+/* 3. Parts of web */
+
+.content { padding: 80px 0; }
+
+.box-content{ width: 700px; margin: 0 auto; }
+
+.informacion { color: #404040; }
+  .informacion p { max-width: 1055px; margin: 0 auto; height: 100px;}
+
+.servicios {background: #404040; color: #fff;}
+
+/*Efecto Parallax*/
+.portafolio {background: url(/images/dummy-3.jpg) no-repeat center top; color: #fff; background-size: cover; opacity: 0.8;
+  background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.blog { background: #404040; color: #fff; }
+
+.contacto {background: url(/images/maps.jpg) no-repeat center top; height: 400px; background-size: cover; opacity: 0.6;}
+
+/* List */
+.list-servicios figure { position: relative; width: 100px;  height: 100px; }
+.list-servicios figure:after { content: " "; position: absolute; left: 0; top: 0; z-index: 0; background: #fff; border-radius: 50%; width: 100px; height: 100px; }
+  .list-servicios img { position: relative; z-index: 1; }
+
+.list-servicios li { padding: 0 30px;  }
+.list-servicios figcaption { position: absolute; left: 0; right: 0; bottom: -40px; }
